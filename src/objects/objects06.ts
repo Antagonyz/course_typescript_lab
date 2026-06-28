@@ -14,6 +14,11 @@ export const user: User = {
   age: 30,
   role: ["admin", "user"],
   equal(other: User) {	
-	return true
+    return (
+      this.name === other.name &&
+      this.age === other.age &&
+      this.role.length === other.role.length &&
+      this.role.every((value, index) => value === other.role[index])
+    );
   },
 };
