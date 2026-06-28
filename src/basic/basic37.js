@@ -3,8 +3,11 @@
 */
 
 export function map(arr, f) {
-
-  return arr;
+  const result = [];
+  for (const item of arr) {
+    result.push(f(item));
+  }
+  return result;
 }
 
 
