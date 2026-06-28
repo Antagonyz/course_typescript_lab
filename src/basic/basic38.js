@@ -3,7 +3,10 @@
 */
 
 export function some(arr, callback) {
-	return false;
+  for (const item of arr) {
+    if (callback(item)) return true;
+  }
+  return false;
 }
 
 
