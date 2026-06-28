@@ -3,7 +3,9 @@
 */
 
 export function all(arr, callback) {
-
-	return true;
+  for (const item of arr) {
+    if (!callback(item)) return false;
+  }
+  return true;
 }
 
