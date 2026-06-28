@@ -4,18 +4,23 @@
 
 export abstract class MathOperations {
   static pi: number = 3.14159265359;
-  
+
+  static square(value: number): number {
+    return value * value;
+  }
+
   abstract calculate(): number;
-
 }
-
 
 export class CircleArea extends MathOperations {
   radius: number;
-  
+
   constructor(radius: number) {
     super();
     this.radius = radius;
   }
-  
+
+  override calculate(): number {
+    return MathOperations.pi * MathOperations.square(this.radius);
+  }
 }

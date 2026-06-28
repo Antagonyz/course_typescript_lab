@@ -11,7 +11,10 @@ export class Logger {
 
 export class SafeLogger extends Logger {
   override log(message: string): void {
-     
+    if (!message) {
+      return;
+    }
+
     console.log(message);
   }
 }

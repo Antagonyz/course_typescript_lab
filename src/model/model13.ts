@@ -9,7 +9,9 @@ export class Bird {
   }
 }
 
-
 export class Penguin extends Bird {
-
+  override fly(): Penguin {
+    console.log("Cannot fly");
+    return this;
+  }
 }

@@ -18,9 +18,8 @@ export function Validatable<TBase extends new (...args: any[]) => any>(Base: TBa
   };
 }
 
- 
 export class FormData {
   fields: any = {};
 }
 
-export const EnhancedFormData 
+export const EnhancedFormData = Serializable(Validatable(FormData));

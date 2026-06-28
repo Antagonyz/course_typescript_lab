@@ -4,14 +4,18 @@
 
 export class Animal {
   name: string;
-  
+
   constructor(name: string) {
     this.name = name;
   }
-  
+
   makeSound(): void {
     console.log("Some generic sound");
   }
 }
 
-export class Dog 
+export class Dog extends Animal {
+  bark(): void {
+    console.log("Woof!");
+  }
+}
