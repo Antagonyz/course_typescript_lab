@@ -7,6 +7,9 @@ export function addToCollection<T, K extends string>(
     collectionName: K,
     element: T
 ): Record<K, T[]> {
-    return obj;
+    return {
+        ...obj,
+        [collectionName]: [...obj[collectionName], element],
+    };
 }
 
