@@ -3,7 +3,11 @@
 */
 
 export function fromArrays<T, K extends string>(keys: K[], values: T[]): Record<K, T> {
-	const result: any = {};
+	const result = {} as Record<K, T>;
+	const length = Math.min(keys.length, values.length);
+	for (let i = 0; i < length; i++) {
+		result[keys[i]] = values[i];
+	}
 	return result;
 }
 
