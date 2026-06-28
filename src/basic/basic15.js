@@ -3,5 +3,12 @@
 */
 
 export function swap_first_last(arr) {
-    return arr;
+  const result = [];
+  for (let i = 0; i < arr.length; i++) result[i] = arr[i];
+  if (result.length > 1) {
+    const t = result[0];
+    result[0] = result[result.length - 1];
+    result[result.length - 1] = t;
+  }
+  return result;
 }
