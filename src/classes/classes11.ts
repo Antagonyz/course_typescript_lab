@@ -21,6 +21,6 @@ export class Collection<T extends { equals(other: T): boolean }> {
   }
 
   count(item: T): number {
-    
+    return this.items.filter((i) => i.equals(item)).length;
   }
 }
