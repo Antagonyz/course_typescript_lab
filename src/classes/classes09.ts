@@ -3,7 +3,7 @@
 */
 
 export class Product {
-  
+  static discountRate = 0;
   name: string;
   price: number;
   constructor(name: string, price: number) {
@@ -14,6 +14,8 @@ export class Product {
     console.log(`Продукт: ${this.name}, цена: ${this.price}`);
   } 
   static applyDiscount(products: Product[]) {
-  
+        for (const product of products) {
+            product.price -= product.price * Product.discountRate;
+        }
   }
 }
