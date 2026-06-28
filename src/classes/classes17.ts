@@ -27,9 +27,13 @@ export class Square implements Figure {
     this.point2 = point2;
   }
   moveTo(point: Point) {
-	
+    const width = this.point2.x - this.point1.x;
+    const height = this.point2.y - this.point1.y;
+    this.point1 = point;
+    this.point2 = new Point(point.x + width, point.y + height);
   }
   getMaxX() {
-
+    return this.point2.x;
   }
 }
+
