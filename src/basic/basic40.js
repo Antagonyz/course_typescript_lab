@@ -4,8 +4,10 @@
 */
 
 export function find(arr, callback) {
-
-    return undefined;
+  for (const item of arr) {
+    if (callback(item)) return item;
+  }
+  return undefined;
 }
 
 
