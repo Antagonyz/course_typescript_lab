@@ -10,6 +10,6 @@ const calculator = {
 };
 
 export function add(value: number) {
-	const adder = calculator.add;
-	return adder(value); 	
+    const adder = calculator.add.bind(calculator);
+    return adder(value);
 }
