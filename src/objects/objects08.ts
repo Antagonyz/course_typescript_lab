@@ -7,5 +7,12 @@ export type Summable = {
 }
 
 export function sum<T extends Summable>(a: T[]): T {
-	return a[0];
+	if (a.length === 0) {
+		throw new Error('Array must not be empty');
+	}
+	let total = a[0];
+	for (let i = 1; i < a.length; i++) {
+		total = total.sum(a[i]) as T;
+	}
+	return total;
 }
