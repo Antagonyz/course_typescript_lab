@@ -3,6 +3,9 @@
 */
 
 export function extractUniqueValues(arr1, arr2) {
-    return arr1;
+  for (const item of arr1) {
+    if (arr2.indexOf(item) === -1) arr2.push(item);
+  }
+  return arr2;
 }
 
