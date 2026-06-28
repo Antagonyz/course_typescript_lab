@@ -4,6 +4,9 @@
 
 
 export function updateField<T, K extends keyof T>(obj: T, field: K, value: T[K]): T {
-	return obj;
+	return {
+		...obj,
+		[field]: value,
+	} as T;
 }
 
