@@ -4,8 +4,11 @@
 */
 
 export function filter(arr, f) {
-
-	return arr;
+  const result = [];
+  for (const item of arr) {
+    if (f(item)) result.push(item);
+  }
+  return result;
 }
 
 
