@@ -4,5 +4,8 @@
 */
 
 export function capitalize_words(sentence) {
-	return "";
+	return sentence
+		.split(" ")
+		.map(word => word ? word[0].toUpperCase() + word.slice(1) : word)
+		.join(" ");
 }
