@@ -6,7 +6,7 @@
 export const user = {
     name: 'Алексей',
     greeting() {
-        const externalFn = function() {
+        const externalFn = () => {
             console.log(`Привет, меня зовут ${this.name}`);
         };
         externalFn();
