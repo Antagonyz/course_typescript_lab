@@ -4,6 +4,13 @@
 */
 
 export function count_vowels(s) {
-	return 0;
+  const vowels = "аеёиоуыэюя";
+  let count = 0;
+  let i = 0;
+  while (i < s.length) {
+    if (vowels.includes(s[i].toLowerCase())) count++;
+    i++;
+  }
+  return count;
 }
 
