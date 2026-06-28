@@ -3,6 +3,7 @@
 */
 
 export function removeField<T, K extends keyof T>(obj: T, field: K): Omit<T, K> {    
-    return obj;
+	const { [field]: _, ...remaining } = obj as any;
+	return remaining;
 }
 
