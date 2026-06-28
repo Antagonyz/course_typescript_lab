@@ -3,7 +3,16 @@
 */
 
 export function splitAndMergeStrings(strArr) {
-  return "";
+  const result = [];
+  for (const str of strArr) {
+    if (str.length <= 1) {
+      result.push(str);
+    } else {
+      const mid = Math.ceil(str.length / 2);
+      result.push(str.slice(0, mid), str.slice(mid));
+    }
+  }
+  return result;
 }
 
 
