@@ -3,6 +3,9 @@
 */
 
 export function removeDuplicates(arr) {
-
-	return arr;
+  const result = [];
+  for (const item of arr) {
+    if (result.indexOf(item) === -1) result.push(item);
+  }
+  return result;
 }
